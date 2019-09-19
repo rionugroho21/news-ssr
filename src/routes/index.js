@@ -8,12 +8,12 @@ export default [{
     {
       path: "/",
       exact: true,
-      component: Landing
+      component: Article
     },
     {
-      path: "/article",
+      path: "/photo",
       exact: true,
-      component: Article
+      component: Landing
     }
   ]
 }]

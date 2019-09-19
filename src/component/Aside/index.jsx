@@ -11,7 +11,7 @@ class Aside extends Component{
         <nav className="menu-link">
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/article">Article</Link></li>
+            <li><Link to="/photo">photo</Link></li>
           </ul>
         </nav>
         <div className="menu-footer">

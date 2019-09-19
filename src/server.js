@@ -48,39 +48,3 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`App listening on port ${port}!`);
 });
-
-
-// import express from 'express'
-// import path from 'path'
-// import React from 'react'
-// import { renderToString } from 'react-dom/server'
-// import App from './App'
-
-// const BUILD_DIR = path.resolve(__dirname, '../build');
-
-// const app = express();
-// const port = 8181;
-
-// app.use(express.static(BUILD_DIR));
-
-// app.get('/', (req, res) => {
-//   const component = renderToString(<App />)
-
-//   const html = `
-//   <!doctype html>
-//     <html>
-//     <head>
-//       <link rel="stylesheet" media="screen" href="./main.css" crossorigin="anonymous" />
-//     </head>
-//     <body>
-//     <div id="root">${component}</div>
-//     <script src="./bundle.js"></script>
-//   </body>
-//   </html>`
-
-//   res.send(html)
-// })
-
-// app.listen(port, () => {
-//   console.log(`App listening on port ${port}!`);
-// });
