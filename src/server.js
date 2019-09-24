@@ -3,6 +3,7 @@ import path from 'path';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
+import { MemoryRouter } from 'react-router';
 import bodyParser from 'body-parser';
 import { Helmet } from 'react-helmet';
 
@@ -16,12 +17,14 @@ const port = 8181;
 app.use(bodyParser.json());
 app.use(express.static(BUILD_DIR));
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   const context = {}
 
   const component = renderToString(
     <StaticRouter location={req.url} context={context}>
-      <App />
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
     </StaticRouter>
   );
 
